@@ -12,7 +12,7 @@ filename <- "test.csv"
 fullfilepath <- paste0(filepath, filename)
 testdata_raw <- read.csv(fullfilepath)
 
-filepath <- "//"
+filepath <- ""
 output_filename <-"output.csv"
 fullfilepath <- paste0(filepath, output_filename)
 
@@ -44,8 +44,8 @@ elapsed_time<-system.time(model <- xgboost(
   label     = trainoutput,
   max_depth = 6, 
   eta       = 0.3, 
-  nthread   = 4, 
-  nrounds   = 134, # based on CV 
+  #nthread   = 4, 
+  nrounds   = 124, # based on CV 
   num_class = 10,
   objective = "multi:softmax", 
   verbose   = 1))

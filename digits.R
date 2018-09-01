@@ -10,9 +10,9 @@ filename <- "test.csv"
 fullfilepath <- file.path(filepath, filename)
 testdata_raw <- read.csv(fullfilepath)
 
-filepath <- "/"
+filepath <- "~"
 output_filename <-"output.csv"
-fullfilepath <- paste0(filepath, output_filename)
+fullfilepath <- file.path(filepath, output_filename)
 
 set.seed(12345)
 
